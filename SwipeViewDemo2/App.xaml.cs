@@ -11,7 +11,16 @@ namespace SwipeViewDemo2
             InitializeComponent();
 
             //MainPage = new MainPage();
-
+            MainPage = new TabbedPage()
+            {
+                Children =
+                {
+                    new NavigationPage(new ListViewPage()) { Title = "ListView" },
+                    new NavigationPage(new CollectionViewPage()) { Title = "CollectionView" },
+                    //new NavigationPage(new ProgrammaticalSwipeView()) { Title = "Programmatically" },
+                    //new NavigationPage(new PageSwipe()) { Title = "Page swipe" }
+                }
+            };
         }
 
         protected override void OnStart()
