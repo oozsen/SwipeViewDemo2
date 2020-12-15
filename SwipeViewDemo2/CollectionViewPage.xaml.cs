@@ -10,6 +10,11 @@ namespace SwipeViewDemo2
         public CollectionViewPage()
         {
             InitializeComponent();
+
+            BindingContext = new DemoViewModel("collectionview");
+
+            MessagingCenter.Subscribe<DemoViewModel>(this, "favourite_collectionview", sender => { DisplayAlert("SwipeView", "Favourite", "Ok"); });
+            MessagingCenter.Subscribe<DemoViewModel>(this, "delete_collectionview", sender => { DisplayAlert("SwipeView", "Delete", "Ok"); });
         }
     }
 }

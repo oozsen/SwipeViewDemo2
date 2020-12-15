@@ -8,6 +8,8 @@ namespace SwipeViewDemo2
     {
         public App()
         {
+            Device.SetFlags(new[] { "SwipeView_Experimental" });
+
             InitializeComponent();
 
             //MainPage = new MainPage();
@@ -17,7 +19,7 @@ namespace SwipeViewDemo2
                 {
                     new NavigationPage(new ListViewPage()) { Title = "ListView" },
                     new NavigationPage(new CollectionViewPage()) { Title = "CollectionView" },
-                    //new NavigationPage(new ProgrammaticalSwipeView()) { Title = "Programmatically" },
+                    new NavigationPage(new Programmatical()) { Title = "Programmatically" },
                     //new NavigationPage(new PageSwipe()) { Title = "Page swipe" }
                 }
             };
