@@ -20,7 +20,7 @@ namespace SwipeViewDemo2
                     new NavigationPage(new ListViewPage()) { Title = "ListView" },
                     new NavigationPage(new CollectionViewPage()) { Title = "CollectionView" },
                     new NavigationPage(new Programmatical()) { Title = "Programmatically" },
-                    //new NavigationPage(new PageSwipe()) { Title = "Page swipe" }
+                    new NavigationPage(new PageSwipe()) { Title = "Page swipe" }
                 }
             };
         }
